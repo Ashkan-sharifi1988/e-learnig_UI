@@ -1,0 +1,31 @@
+.modal-body h5 {
+
+    margin-top: 10px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    color: #333;
+    
+}
+
+.grid-item.selected {
+    background-color: #036ad8;
+    color: white;
+    border-color: #0056b3;
+}
+
+.grid-item:hover {
+    background-color: #cccccc;
+}

@@ -1,0 +1,93 @@
+.video-conference-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 25%; /* Maintain the 4-column layout */
+  max-width: 25%;
+  position: relative;
+  transition: flex 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.video-wrapper.active {
+  flex: 0 0 30%; /* Make active video slightly larger */
+  max-width: 30%;
+  transform: scale(1.05);
+}
+
+.video-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.video-element {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Maintain 4:3 aspect ratio */
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.video-element:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fullscreen-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fullscreen-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.video-wrapper:hover .fullscreen-button {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .video-wrapper {
+    flex: 0 0 50%; /* Adjust layout for smaller screens */
+    max-width: 50%;
+  }
+
+  .video-wrapper.active {
+    flex: 0 0 60%; /* Adjust active video size on smaller screens */
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-wrapper {
+    flex: 0 0 100%; /* Stack videos on top of each other */
+    max-width: 100%;
+  }
+
+  .video-title {
+    font-size: 0.9rem;
+  }
+}

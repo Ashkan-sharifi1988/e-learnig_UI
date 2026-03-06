@@ -1,0 +1,57 @@
+.goals-input-container {
+    position: relative;
+}
+
+.goals-input-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 4px;
+    min-height: 40px;
+    background: #fff;
+    
+}
+
+.goal-badge {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.goal-badge .remove-goal-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.goals-input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    min-width: 120px;
+}
+
+.goals-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}

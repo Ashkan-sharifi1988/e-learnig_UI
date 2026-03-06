@@ -1,0 +1,111 @@
+.circle-progress-container {
+  position: relative;
+}
+
+.circle-progress-wrapper.horizontal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 5px 0;
+  position: relative;
+}
+
+.circle-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Example size, adjust as needed */
+  height: 80px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Add pointer cursor for interaction */
+}
+/* Hover effect for circles */
+.circle-node:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #007bff; /* Change border color on hover */
+  z-index: 5; /* Elevate hovered node */
+}
+
+
+
+.circle-node.locked {
+  cursor: not-allowed;
+  opacity: 0.6; /* Dim the locked nodes */
+}
+
+.circle-node img.circle-image {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the image fits the circle */
+}
+
+.circle-node .lock-icon {
+  font-size: 1.5rem;
+  color: #aaa; /* Grey color for lock icon */
+}
+
+/* Ensure connections between circles */
+.circle-connector {
+  width: 50px; /* Length of the connector line */
+  height: 2px; /* Thickness of the connector line */
+  background-color: #ddd; /* Default connector color */
+  transition: background-color 0.3s ease; /* Smooth color change */
+  align-self: center; /* Ensure vertical alignment */
+  margin-top: -25px; /* Slightly move the connector upward */
+}
+/* Highlight connector on hover */
+.circle-node:hover ~ .circle-connector {
+  background-color: #007bff;
+}
+
+
+.circle-connector.active {
+  background-color: #4caf50; /* Green for passed connections */
+}
+
+.circle-node.passed {
+  background-color: #4caf50; /* Green for passed circles */
+}
+
+.circle-node.passed:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Course name under each circle */
+.course-name {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.path-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.path-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.course-count {
+  font-size: 1rem;
+  color: #555;
+}
+
+

@@ -1,0 +1,85 @@
+/* General Layout */
+.admin-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  background-color: #343a40;
+  color: white;
+  height: 100%;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.admin-sidebar.expanded {
+  width: 200px;
+}
+
+.admin-sidebar.collapsed {
+  width: 60px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #495057;
+}
+
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-brand {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-menu ul li:hover {
+  background-color: #495057;
+}
+
+.sidebar-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.menu-label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Main Content */
+.admin-content {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow-y: auto;
+}
